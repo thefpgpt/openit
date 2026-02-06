@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Happy Birthday Website 2.0 | Aoudumber Bade">
+    <meta name="github" content="https://github.com/Aoudumber-Bade">
     <title>DII Birthday</title>
 
     <link rel="stylesheet" href="style.css">
@@ -11,91 +13,206 @@
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Poppins:wght@400;600&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Poppins:wght@400;600&display=swap"
         rel="stylesheet">
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 
 <body>
-
 <div id="wrapper">
+
+    <div class="flag__birthday">
+        <img src="./images/1.png" width="350" class="flag__left">
+        <img src="./images/1.png" width="350" class="flag__right">
+    </div>
 
     <div class="content">
         <div class="left">
-            <h1 class="Happy__Birthday">Happy Birthday DII 🎉</h1>
+            <div class="title">
+                <h1 class="happy">
+                    <span style="--t: 4s;">H</span>
+                    <span style="--t: 4.2s;">a</span>
+                    <span style="--t: 4.4s;">p</span>
+                    <span style="--t: 4.6s;">p</span>
+                    <span style="--t: 4.8s;">y</span>
+                </h1>
+                <h1 class="birthday">
+                    <span style="--t: 5s;">B</span>
+                    <span style="--t: 5.2s;">i</span>
+                    <span style="--t: 5.4s;">r</span>
+                    <span style="--t: 5.6s;">t</span>
+                    <span style="--t: 5.8s;">h</span>
+                    <span style="--t: 6s;">d</span>
+                    <span style="--t: 6.2s;">a</span>
+                    <span style="--t: 6.4s;">y</span>
+                </h1>
+                <div class="hat">
+                    <img src="./images/hat.png" width="130">
+                </div>
+            </div>
 
             <div class="date__of__birth">
                 <span></span>
             </div>
 
-            <button id="btn__letter">
-                <div class="mail">
-                    Click Here DII <i class="fa-regular fa-envelope"></i>
+            <div class="btn">
+                <button id="btn__letter">
+                    <div class="mail">
+                        Click Here DII
+                        <i class="fa-regular fa-envelope"></i>
+                    </div>
+                </button>
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="box__account">
+                <div class="image">
+                    <img src="./images/unnamed.png">
                 </div>
-            </button>
+                <div class="name">
+                    <i class="fa-solid fa-heart"></i>
+                    <span>Dear Diii</span>
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- MAIL BOX -->
+    <!-- LETTER BOX (MISSING BEFORE – NOW FIXED) -->
+    <div class="box__letter">
+        <div class="letter__border">
+
+            <i class="fa-solid fa-xmark close"></i>
+
+            <h2 class="title__letter"></h2>
+
+            <div id="heart__letter">❤️</div>
+
+            <img class="love__img" src="./images/unnamed.png">
+
+            <img id="mewmew" src="./images/unnamed.png">
+
+            <p class="text__letter"></p>
+
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+
+        </div>
+    </div>
+
+    <!-- MAIL POPUP -->
     <div class="boxMail">
-        <i class="fa-solid fa-xmark close"></i>
+        <i class="fa-solid fa-xmark"></i>
 
         <div class="boxMail-container">
-            <h2 class="title__letter"></h2>
-            <p class="text__letter"></p>
+            <div class="card1">
+                <div class="userImg">
+                    <img src="./images/unnamed.png">
+                </div>
+
+                <h4 class="username">
+                    To: CUtuuu 💖<span class="underline"></span>
+                </h4>
+
+                <h3>Happy Birthday</h3>
+
+                <div class="imageCute">
+                    <img src="./images/cute1.png">
+                </div>
+            </div>
+
+            <div class="card2">
+                <div class="card2-content">
+                    <h3>To You!</h3>
+
+                    <h2>
+                        Happiest Birthdayyyyy to my beautiful diiiii🎂 💌 
+                        Thank you for always being there for me,
+                        no matter what 😘😘You are not just my sister,
+                        you are my best friend, my guide, and my biggest support💌
+                        From our unforgettable Mumbai vacation to all those random plans where you are always ready to go anywhere at any time,
+                        every moment with you becomes a memory I will cherish forever 🤗
+                        I love how we share everything food, clothes, secrets, laughter, and even silence & secret 🫂🫂😭😭 
+                        You always give me the right advice, protect me like a shield, and stand by me in every situation.❤️
+                        Your care, love, and strength inspire me more than you know.
+                        Thank you for understanding me without words, for scolding me when needed, and loving me endlessly.
+                        I am so lucky to have a dii like you in my life. May this year bring you all the happiness 🫶🏻 
+                        LOVEEEE YOUUUUU SOOO MUCHHHH 💌😘😘😘
+                    </h2>
+
+                    <div class="imageCute2">
+                        <img src="./images/cute2.png">
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
 </div>
 
 <script>
-    let datetxt = "13 Feb";
-    let datatxtletter = "Happiest Birthday to my beautiful diii 💖 You are my best friend and my biggest support. I love you so much!";
-    let titleLetter = "To You 💌";
+    let datetxt = "13 feb";
+    let datatxtletter = "My love. You are a very special girl. I always silently thank you for coming into my life. Today, I wish you all the best, lots of health, and lots of joy. I always hope we will celebrate many more birthdays like this together. Happy birthday to you.💕";
+    let titleLetter = "To you";
+
+    let charArrDate = datetxt.split('');
+    let charArrDateLetter = datatxtletter.split('');
+    let charArrTitle = titleLetter.split('');
 
     let dateSpan = document.querySelector(".date__of__birth span");
+    let textLetter = document.querySelector(".text__letter");
     let titleEl = document.querySelector(".title__letter");
-    let textEl = document.querySelector(".text__letter");
 
     let i = 0;
-    setInterval(() => {
-        if (i < datetxt.length) {
-            dateSpan.textContent += datetxt[i++];
-        }
-    }, 150);
+    setTimeout(() => {
+        let timer = setInterval(() => {
+            if (i < charArrDate.length) {
+                dateSpan.textContent += charArrDate[i++];
+            } else {
+                clearInterval(timer);
+            }
+        }, 100);
+    }, 12000);
 
     $("#btn__letter").on("click", function () {
-        $(".boxMail").addClass("active");
+        $(".box__letter").slideDown();
+        $(".letter__border").slideDown();
 
+        let ti = 0, ci = 0;
         titleEl.textContent = "";
-        textEl.textContent = "";
-
-        let ti = 0;
-        let ci = 0;
+        textLetter.textContent = "";
 
         let titleInterval = setInterval(() => {
-            if (ti < titleLetter.length) {
-                titleEl.textContent += titleLetter[ti++];
-            } else {
-                clearInterval(titleInterval);
-            }
+            if (ti < charArrTitle.length) {
+                titleEl.textContent += charArrTitle[ti++];
+            } else clearInterval(titleInterval);
         }, 100);
 
         setTimeout(() => {
             let contentInterval = setInterval(() => {
-                if (ci < datatxtletter.length) {
-                    textEl.textContent += datatxtletter[ci++];
-                } else {
-                    clearInterval(contentInterval);
-                }
-            }, 40);
-        }, 800);
+                if (ci < charArrDateLetter.length) {
+                    textLetter.textContent += charArrDateLetter[ci++];
+                } else clearInterval(contentInterval);
+            }, 50);
+        }, 2000);
     });
 
     $(".close").on("click", function () {
-        $(".boxMail").removeClass("active");
+        $(".box__letter").slideUp();
+        $(".letter__border").slideUp();
     });
+
+    document.querySelector(".mail").onclick = function () {
+        document.querySelector(".boxMail").classList.add("active");
+    };
+
+    document.querySelector(".boxMail .fa-xmark").onclick = function () {
+        document.querySelector(".boxMail").classList.remove("active");
+    };
 </script>
 
 </body>
