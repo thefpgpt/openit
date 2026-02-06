@@ -1,218 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="title" content="Happy Birthday Website 2.0 | Aoudumber Bade">
-    <meta name="github" content="https://github.com/Aoudumber-Bade">
-    <title>DII Birthday</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DII Birthday 💖</title>
 
-    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+:root{
+    --pink:#ff4d8d;
+    --dark:#2b2b2b;
+}
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Poppins:wght@400;600&display=swap"
-        rel="stylesheet">
+*{box-sizing:border-box}
 
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+body{
+    margin:0;
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(135deg,#ffd6e8,#ffeef5);
+    overflow-x:hidden;
+    color:var(--dark);
+}
+
+/* ---------- HERO ---------- */
+.hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero h1{
+    font-family:'Dancing Script',cursive;
+    font-size:4rem;
+    color:var(--pink);
+    margin-bottom:10px;
+}
+
+.date{
+    font-size:1.3rem;
+    margin-bottom:30px;
+    letter-spacing:3px;
+}
+
+.open-btn{
+    background:var(--pink);
+    color:#fff;
+    border:none;
+    padding:15px 40px;
+    border-radius:40px;
+    font-size:1.1rem;
+    cursor:pointer;
+    transition:.3s;
+    box-shadow:0 10px 25px rgba(255,77,141,.4);
+}
+
+.open-btn:hover{
+    transform:scale(1.08);
+}
+
+/* ---------- FLOATING HEARTS ---------- */
+.heart{
+    position:fixed;
+    bottom:-50px;
+    font-size:20px;
+    animation:float 6s linear infinite;
+    opacity:.7;
+}
+
+@keyframes float{
+    0%{transform:translateY(0) scale(1)}
+    100%{transform:translateY(-120vh) scale(1.5);opacity:0}
+}
+
+/* ---------- MODAL ---------- */
+.modal{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.6);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.modal.active{display:flex}
+
+.card{
+    background:#fff;
+    max-width:900px;
+    width:100%;
+    border-radius:25px;
+    padding:30px;
+    position:relative;
+    animation:pop .6s ease;
+}
+
+@keyframes pop{
+    from{transform:scale(.7);opacity:0}
+    to{transform:scale(1);opacity:1}
+}
+
+.close{
+    position:absolute;
+    top:20px;
+    right:25px;
+    font-size:22px;
+    cursor:pointer;
+    color:#777;
+}
+
+/* ---------- LETTER ---------- */
+.card h2{
+    font-family:'Dancing Script',cursive;
+    color:var(--pink);
+    font-size:3rem;
+    text-align:center;
+    margin-bottom:10px;
+}
+
+.card h3{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.message{
+    line-height:1.7;
+    white-space:pre-line;
+    font-size:1.05rem;
+}
+
+/* ---------- MOBILE ---------- */
+@media(max-width:600px){
+    .hero h1{font-size:3rem}
+    .card h2{font-size:2.3rem}
+}
+</style>
 </head>
-
 <body>
-<div id="wrapper">
 
-    <div class="flag__birthday">
-        <img src="./images/1.png" width="350" class="flag__left">
-        <img src="./images/1.png" width="350" class="flag__right">
+<!-- HERO -->
+<section class="hero">
+    <h1>Happy Birthday 🎉</h1>
+    <div class="date" id="date"></div>
+    <button class="open-btn" id="openLetter">
+        Click Here DII 💌
+    </button>
+</section>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+    <div class="card">
+        <i class="fa-solid fa-xmark close" id="close"></i>
+
+        <h2>To you 💖</h2>
+        <h3>Happy Birthday</h3>
+
+        <div class="message" id="message"></div>
     </div>
-
-    <div class="content">
-        <div class="left">
-            <div class="title">
-                <h1 class="happy">
-                    <span style="--t: 4s;">H</span>
-                    <span style="--t: 4.2s;">a</span>
-                    <span style="--t: 4.4s;">p</span>
-                    <span style="--t: 4.6s;">p</span>
-                    <span style="--t: 4.8s;">y</span>
-                </h1>
-                <h1 class="birthday">
-                    <span style="--t: 5s;">B</span>
-                    <span style="--t: 5.2s;">i</span>
-                    <span style="--t: 5.4s;">r</span>
-                    <span style="--t: 5.6s;">t</span>
-                    <span style="--t: 5.8s;">h</span>
-                    <span style="--t: 6s;">d</span>
-                    <span style="--t: 6.2s;">a</span>
-                    <span style="--t: 6.4s;">y</span>
-                </h1>
-                <div class="hat">
-                    <img src="./images/hat.png" width="130">
-                </div>
-            </div>
-
-            <div class="date__of__birth">
-                <span></span>
-            </div>
-
-            <div class="btn">
-                <button id="btn__letter">
-                    <div class="mail">
-                        Click Here DII
-                        <i class="fa-regular fa-envelope"></i>
-                    </div>
-                </button>
-            </div>
-        </div>
-
-        <div class="right">
-            <div class="box__account">
-                <div class="image">
-                    <img src="./images/unnamed.png">
-                </div>
-                <div class="name">
-                    <i class="fa-solid fa-heart"></i>
-                    <span>Dear Diii</span>
-                    <i class="fa-solid fa-heart"></i>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- LETTER BOX (MISSING BEFORE – NOW FIXED) -->
-    <div class="box__letter">
-        <div class="letter__border">
-
-            <i class="fa-solid fa-xmark close"></i>
-
-            <h2 class="title__letter"></h2>
-
-            <div id="heart__letter">❤️</div>
-
-            <img class="love__img" src="./images/unnamed.png">
-
-            <img id="mewmew" src="./images/unnamed.png">
-
-            <p class="text__letter"></p>
-
-            <div class="heart"></div>
-            <div class="heart"></div>
-            <div class="heart"></div>
-
-        </div>
-    </div>
-
-    <!-- MAIL POPUP -->
-    <div class="boxMail">
-        <i class="fa-solid fa-xmark"></i>
-
-        <div class="boxMail-container">
-            <div class="card1">
-                <div class="userImg">
-                    <img src="./images/unnamed.png">
-                </div>
-
-                <h4 class="username">
-                    To: CUtuuu 💖<span class="underline"></span>
-                </h4>
-
-                <h3>Happy Birthday</h3>
-
-                <div class="imageCute">
-                    <img src="./images/cute1.png">
-                </div>
-            </div>
-
-            <div class="card2">
-                <div class="card2-content">
-                    <h3>To You!</h3>
-
-                    <h2>
-                        Happiest Birthdayyyyy to my beautiful diiiii🎂 💌 
-                        Thank you for always being there for me,
-                        no matter what 😘😘You are not just my sister,
-                        you are my best friend, my guide, and my biggest support💌
-                        From our unforgettable Mumbai vacation to all those random plans where you are always ready to go anywhere at any time,
-                        every moment with you becomes a memory I will cherish forever 🤗
-                        I love how we share everything food, clothes, secrets, laughter, and even silence & secret 🫂🫂😭😭 
-                        You always give me the right advice, protect me like a shield, and stand by me in every situation.❤️
-                        Your care, love, and strength inspire me more than you know.
-                        Thank you for understanding me without words, for scolding me when needed, and loving me endlessly.
-                        I am so lucky to have a dii like you in my life. May this year bring you all the happiness 🫶🏻 
-                        LOVEEEE YOUUUUU SOOO MUCHHHH 💌😘😘😘
-                    </h2>
-
-                    <div class="imageCute2">
-                        <img src="./images/cute2.png">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
 </div>
 
 <script>
-    let datetxt = "13 feb";
-    let datatxtletter = "My love. You are a very special girl. I always silently thank you for coming into my life. Today, I wish you all the best, lots of health, and lots of joy. I always hope we will celebrate many more birthdays like this together. Happy birthday to you.💕";
-    let titleLetter = "To you";
+/* DATE TYPE */
+const dateText = "13 feb";
+let d = 0;
+const dateEl = document.getElementById("date");
+setInterval(()=>{
+    if(d < dateText.length){
+        dateEl.textContent += dateText[d++];
+    }
+},120);
 
-    let charArrDate = datetxt.split('');
-    let charArrDateLetter = datatxtletter.split('');
-    let charArrTitle = titleLetter.split('');
+/* LETTER TEXT (UNCHANGED) */
+const letterText = `Happiest Birthdayyyyy to my beautiful diiiii🎂 💌 
+Thank you for always being there for me,
+no matter what 😘😘You are not just my sister,
+you are my best friend, my guide, and my biggest support💌
+From our unforgettable Mumbai vacation to all those random plans where you are always ready to go anywhere at any time,
+every moment with you becomes a memory I will cherish forever  🤗
+I love how we share everything food, clothes, secrets, laughter, and even silence & secret 🫂🫂😭😭 
+You always give me the right advice, protect me like a shield, and stand by me in every situation.❤️
+Your care, love, and strength inspire me more than you know.
+Thank you for understanding me without words, for scolding me when needed, and loving me endlessly.
+I am so lucky to have a dii like you in my life. May this year bring you all the happiness 🫶🏻 
+LOVEEEE YOUUUUU SOOO MUCHHHH 💌😘😘😘`;
 
-    let dateSpan = document.querySelector(".date__of__birth span");
-    let textLetter = document.querySelector(".text__letter");
-    let titleEl = document.querySelector(".title__letter");
+const msgEl = document.getElementById("message");
+let i = 0;
 
-    let i = 0;
-    setTimeout(() => {
-        let timer = setInterval(() => {
-            if (i < charArrDate.length) {
-                dateSpan.textContent += charArrDate[i++];
-            } else {
-                clearInterval(timer);
-            }
-        }, 100);
-    }, 12000);
+/* OPEN LETTER */
+document.getElementById("openLetter").onclick = ()=>{
+    document.getElementById("modal").classList.add("active");
+    msgEl.textContent = "";
+    i = 0;
 
-    $("#btn__letter").on("click", function () {
-        $(".box__letter").slideDown();
-        $(".letter__border").slideDown();
+    const typing = setInterval(()=>{
+        if(i < letterText.length){
+            msgEl.textContent += letterText[i++];
+        }else{
+            clearInterval(typing);
+        }
+    },25);
+};
 
-        let ti = 0, ci = 0;
-        titleEl.textContent = "";
-        textLetter.textContent = "";
+/* CLOSE */
+document.getElementById("close").onclick = ()=>{
+    document.getElementById("modal").classList.remove("active");
+};
 
-        let titleInterval = setInterval(() => {
-            if (ti < charArrTitle.length) {
-                titleEl.textContent += charArrTitle[ti++];
-            } else clearInterval(titleInterval);
-        }, 100);
-
-        setTimeout(() => {
-            let contentInterval = setInterval(() => {
-                if (ci < charArrDateLetter.length) {
-                    textLetter.textContent += charArrDateLetter[ci++];
-                } else clearInterval(contentInterval);
-            }, 50);
-        }, 2000);
-    });
-
-    $(".close").on("click", function () {
-        $(".box__letter").slideUp();
-        $(".letter__border").slideUp();
-    });
-
-    document.querySelector(".mail").onclick = function () {
-        document.querySelector(".boxMail").classList.add("active");
-    };
-
-    document.querySelector(".boxMail .fa-xmark").onclick = function () {
-        document.querySelector(".boxMail").classList.remove("active");
-    };
+/* HEART GENERATOR */
+setInterval(()=>{
+    const h = document.createElement("div");
+    h.className = "heart";
+    h.innerHTML = "💖";
+    h.style.left = Math.random()*100+"vw";
+    h.style.animationDuration = (4+Math.random()*3)+"s";
+    document.body.appendChild(h);
+    setTimeout(()=>h.remove(),6000);
+},400);
 </script>
 
 </body>
