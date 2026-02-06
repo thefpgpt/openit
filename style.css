@@ -1,11 +1,5 @@
-body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: #ffe6f0;
-}
-
 .Happy__Birthday {
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Arial', sans-serif;
     color: #c2185b;
     font-size: 3.5em;
     font-weight: 700;
@@ -14,62 +8,29 @@ body {
     margin-top: 100px;
 }
 
-.date__of__birth {
-    text-align: center;
-    font-size: 1.5em;
-    margin-top: 20px;
-}
-
-#btn__letter {
-    display: block;
-    margin: 40px auto;
-    padding: 15px 30px;
-    font-size: 1em;
-    background: #c2185b;
-    color: #fff;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-}
-
+.box__letter,
 .boxMail {
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.6);
     display: none;
-    justify-content: center;
-    align-items: center;
 }
 
 .boxMail.active {
     display: flex;
 }
 
-.boxMail-container {
+.box__letter {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+}
+
+.letter__border {
     background: #fff;
+    margin: auto;
     padding: 30px;
-    width: 90%;
-    max-width: 500px;
+    max-width: 600px;
     border-radius: 20px;
-    text-align: center;
 }
 
-.boxMail .close {
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    font-size: 24px;
-    color: #fff;
+.close {
     cursor: pointer;
-}
-
-.title__letter {
-    font-family: 'Dancing Script', cursive;
-    font-size: 2em;
-    color: #c2185b;
-}
-
-.text__letter {
-    margin-top: 20px;
-    line-height: 1.6;
 }
